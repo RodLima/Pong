@@ -39,7 +39,7 @@ namespace Pong
             Imagem = game.Content.Load<Texture2D>(@"Imagens\bola");
             Posicao = position;
             Direcao = new Vector2(1.0f, 1.0f);
-            velocidade = 200.0f;
+            velocidade = 250.0f;
         }
 
         /// <summary>

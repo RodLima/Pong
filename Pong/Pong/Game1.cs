@@ -157,7 +157,7 @@ namespace Pong
                     {
                         // Se o jogo for para single player o computador
                         // é atualizado automáticamente
-                        MoveBastaoComputador();
+                        MoveIA();
                     }
                     else
                     {
@@ -224,7 +224,7 @@ namespace Pong
                     }
 
                     // Checa a colisão da bola com as raquetes dos jogadores
-                    // Jogador 1 (Raquete da esquerda)
+                    // Jogador 1 (Barra da esquerda)
                     if (bola.GetBounding().Intersects(barra1.GetBounding()))
                     {
                         // Centro da bola
@@ -240,7 +240,7 @@ namespace Pong
                         // Toca o efeito sonoro de colisão com a bola
                         soundToc2.Play();
                     }
-                    // Jogador 2 (Raquete da direita)
+                    // Jogador 2 (Barra da direita)
                     if (bola.GetBounding().Intersects(barra2.GetBounding()))
                     {
                         // Centro da bola
@@ -323,7 +323,7 @@ namespace Pong
             base.Draw(gameTime);
         }
 
-        public void MoveBastaoComputador()
+        public void MoveIA()
         {
             // Bola indo para direita
             if (bola.Direcao.X > 0.0f)
